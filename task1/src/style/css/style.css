@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: min-content 1fr min-content; 
+    height: 100vh;
+    grid-template-areas:
+        "a a"
+        "b c"
+        "d d";
+    align-items: start;
+    justify-content: start;
+}
+
+.header {
+    grid-area: a;
+    min-height: 50px;
+    background-color: antiquewhite;
+}
+
+.footer {
+    grid-area: d;
+    min-height: 100px;
+    background-color: rgb(39, 179, 198);
+}
+
+.users {
+    grid-area: b;
+    width: 200px;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgb(197, 202, 196);
+}
+
+.messages {
+    grid-area: c;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgb(250, 215, 248);
+}
